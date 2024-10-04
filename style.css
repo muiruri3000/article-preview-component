@@ -1,0 +1,248 @@
+*,*::before,*::after{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+img, svg {
+    max-width: 100%;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: grey;
+    margin: auto;
+}
+
+main {
+    margin: auto;
+    max-width: 400px;
+    padding: 1.4em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    font-size: 1rem;
+}
+
+.card-image img {
+    border-radius: .9em 0.9em 0 0;
+}
+
+.card-content {
+    position: relative;
+    padding: 1em 1.5em;
+}
+
+.card-content--title, .card-content--description {
+    margin-bottom: .6em;
+}
+
+.card-content--title {
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+.card-content--description {
+    color: var(--Grayish-Blue);
+}
+
+.card-content--details {
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.avatar img {
+    border-radius: 50%;
+    width: 2.2em;
+    background-color: var(--Light-Grayish-Blue);
+}
+
+.card-person {
+    margin-left: .8em;
+}
+
+.card-person h4 {
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+.card-person p {
+    color: var(--Grayish-Blue);
+}
+
+.share button {
+    border: none;
+    padding: .2em;
+    border-radius: 50%;
+    background-color: lightgray;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.share a:hover {
+    border: 2px solid yellow;
+}
+
+.share-icons {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.container-icons {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    bottom: 0em;
+    width: 70%;
+    height: 15%;
+    right: 5em;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 1em;
+    margin: auto;
+    background-color: var(--Grayish-Blue);
+}
+
+.icons--test {
+    display: none;
+}
+
+.icons--test.visible {
+    display: flex;
+}
+
+.icon-images {
+    position: absolute;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    height: 10%;
+    top: 8em;
+    right: 2em;
+    width: 40%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: .7em;
+    border-radius: 3em;
+}
+
+.icon-images img:last-child {
+    display: none;
+}
+
+.icon-images span {
+    margin-right: 1em;
+}
+
+.icon-images img {
+    margin-right: .6em;
+}
+
+@media (max-width:600px) {
+    .card-content--details{
+        position: relative;
+    }
+  
+    .icon-images{
+        position: relative;
+       top:5em;
+       height: 3em;
+        width: 100%;
+        z-index: 1;
+        left: .1em;
+    }
+
+    .icon-images button{
+        margin-left:auto;
+       
+            border: none;
+            padding: 1em;
+            border-radius: 50%;
+         
+            margin-left: auto;
+            cursor: pointer;
+        
+    }
+    .icon-images button:hover{
+        cursor: pointer;
+    }
+}
+@media (min-width: 601px) {
+    .card {
+        flex-direction: row;
+        border-radius: 1em;
+        flex-grow: 1;
+        font-size: .8rem;
+    }
+
+    .card-image {
+        width: 100%;
+        height: auto;
+        flex-grow: 1;
+        border-radius: 1em;
+        flex-basis: 70em;
+    }
+
+    .card-image img {
+        border-radius: 1em 0 0 1em;
+        object-fit: cover;
+        width: 100%;
+        object-position: 0px 0px;
+        height: 100%;
+    }
+
+    main {
+        margin: 10em;
+        min-width: 650px;
+    }
+
+    .icons {
+        position: absolute;
+        bottom: 6em;
+        right: 10px;
+        max-width: 20%;
+        padding: 0 1em;
+        margin: auto;
+        position: relative;
+    }
+
+    .icons--test {
+        display: none;
+    }
+
+    .icons--test.visible {
+        display: flex;
+        width: 100%;
+        background-color: var(--Desaturated-Dark-Blue);
+    }
+
+    .icon-images {
+        position: absolute;
+        background-color: var(--Very-Dark-Grayish-Blue);
+        height: 10%;
+        top: 8em;
+        right: 2em;
+        width: 40%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding: .7em;
+        border-radius: 3em;
+    }
+}
