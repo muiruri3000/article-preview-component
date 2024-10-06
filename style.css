@@ -3,6 +3,10 @@
     box-sizing: border-box;
     margin: 0;
 }
+@font-face {
+    font-family: manrope;
+    src: url('./fonts/Manrope-Regular.woff2');
+}
 
 :root {
     --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
@@ -22,12 +26,16 @@ html {
     font-size: 16px;
 }
 h1{
+    font-weight: 500;
     font-size: 1.2rem;
     padding-bottom: .6em;
 }
+h2{
+    font-size: .9em;
+}
 body {
    
-    
+    font-family: 'manrope';
     display: flex;
  
     background-color: var(--Light-Grayish-Blue);
