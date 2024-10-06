@@ -20,21 +20,34 @@ html {
 }
 
 body {
-    background-color: grey;
-    margin: auto;
+   
+    
+    display: flex;
+ 
+    background-color: var(--Light-Grayish-Blue);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
-    margin: auto;
+    
     max-width: 400px;
+
+   
+    
     padding: 1.4em;
+    
+   
 }
 
 .card {
+    margin: auto;
     display: flex;
     flex-direction: column;
     background-color: white;
     font-size: 1rem;
+    border-radius: 1rem;
 }
 
 .card-image img {
@@ -44,6 +57,14 @@ main {
 .card-content {
     position: relative;
     padding: 1em 1.5em;
+}
+
+
+.icon-images .shareBtn::before{
+    
+    content: url('./images/icon-share.svg');
+    background-position: center;
+    
 }
 
 .card-content--title, .card-content--description {
@@ -89,6 +110,15 @@ main {
     background-color: lightgray;
     margin-left: auto;
     cursor: pointer;
+}
+.shareBtn button{
+    border: none;
+    padding: .2em;
+    border-radius: 50%;
+    background-color: lightgray;
+    margin-left: auto;
+    cursor: pointer;
+    border: 2px solid red;
 }
 
 .share a:hover {
@@ -165,6 +195,9 @@ main {
         width: 100%;
         z-index: 1;
         left: .1em;
+    }
+    .shareBtn {
+        border: 3px solid red;
     }
 
     .icon-images button{
@@ -244,5 +277,10 @@ main {
         justify-content: start;
         padding: .7em;
         border-radius: 3em;
+    }
+    .icon-images .shareBtn::before{
+    
+        content: '';
+        background-position: center;
     }
 }
